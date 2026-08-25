@@ -58,7 +58,8 @@
     .hero{background:transparent!important}
     body .cta,body .more{animation:none!important}
     /* Restore transparent blue-violet particle flow only; the page background remains visible beneath it. */
-    .hero-flow{display:block!important;position:absolute;z-index:0;inset:0;background:transparent!important;opacity:1;mix-blend-mode:screen;pointer-events:none}
+    .hero-flow{display:block!important;position:absolute;z-index:1;inset:0;background:transparent!important;opacity:1;mix-blend-mode:screen;pointer-events:none}
+    .hero-inner{position:relative;z-index:2}
     .hero-flow canvas{display:block;width:100%;height:100%;background:transparent!important}
     .hero-flow:after{display:none!important}
     .join,.cta,.more{color:#05251d!important;background:linear-gradient(115deg,#e3fff1 0%,#b0f4d3 24%,#65deb0 57%,#2ba47e 100%)!important;border-color:#c5ffe2!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -2px 0 rgba(11,91,68,.3),0 8px 22px rgba(0,83,67,.3),0 0 18px rgba(91,239,183,.27)!important;text-shadow:none}
@@ -73,7 +74,8 @@
     .hero-rail b{color:#e5f4ff;font-size:12px;font-weight:700;letter-spacing:.06em}.hero-rail span{display:block;color:#7799c4}
     .hero-rail .bar{width:66px;height:2px;background:linear-gradient(90deg,#6cffd9,#7895ff);box-shadow:0 0 12px rgba(109,255,215,.5)}
     @keyframes beacon{50%{opacity:.4;transform:scale(.72)} }
-    .hero .particles,.hero-flow,.hero-rail,.hero-kicker{display:none!important}
+    /* Keep legacy decorative layers hidden, while the transparent particle canvas remains visible. */
+    .hero .particles,.hero-rail,.hero-kicker{display:none!important}
     @media(max-width:800px){
       .hero:before{inset:10px;border-radius:18px}.hero-rail{display:none}.hero-kicker{margin-bottom:16px;font-size:9px;letter-spacing:.16em}.hero-inner{padding-left:10px;padding-right:10px}
       body{font-size:14px}
