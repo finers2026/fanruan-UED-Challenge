@@ -38,6 +38,10 @@
     body{background:radial-gradient(ellipse 46% 38% at 50% 32%,#718ba4 0%,#304d70 20%,#132d50 47%,#091b36 75%,#030a18 100%) fixed!important;background-attachment:fixed!important}
     .particles{animation:none!important;opacity:.28!important;filter:drop-shadow(0 0 4px rgba(151,220,255,.38))!important}
     .particles:after{animation:none!important;opacity:.25!important;transform:none!important}
+    /* Unified page backdrop: the hero flow and every section sit on one continuous layer. */
+    .hero,main,section,.dark,footer{background:transparent!important}
+    body{background:radial-gradient(ellipse 46% 38% at 50% 32%,#718ba4 0%,#304d70 20%,#132d50 47%,#091b36 75%,#030a18 100%) fixed!important}
+    .join,.cta,.more{color:#031b16!important;background:linear-gradient(145deg,rgba(238,255,249,.78) 0%,rgba(126,255,190,.82) 35%,rgba(40,238,157,.9) 68%,rgba(19,180,127,.88) 100%)!important;border-color:rgba(208,255,230,.98)!important;box-shadow:inset 1px 1px 0 rgba(255,255,255,.95),inset -2px -3px 0 rgba(2,100,70,.3),inset 0 0 20px rgba(223,255,237,.34),0 9px 23px rgba(0,60,45,.42),0 0 24px rgba(50,255,160,.4)!important}
     .join,.cta,.more{position:relative;isolation:isolate;overflow:hidden;color:#effffc!important;background:linear-gradient(145deg,rgba(246,255,253,.32) 0%,rgba(123,255,221,.16) 38%,rgba(32,165,157,.27) 100%)!important;border:1px solid rgba(213,255,248,.88)!important;border-radius:14px;box-shadow:inset 1px 1px 0 rgba(255,255,255,.88),inset -2px -3px 0 rgba(18,101,111,.22),inset 0 0 18px rgba(140,255,234,.17),0 9px 19px rgba(0,21,45,.32),0 0 20px rgba(83,255,219,.18)!important;backdrop-filter:blur(20px) saturate(165%)}
     .join:before,.cta:before,.more:before{content:"";position:absolute;z-index:-1;inset:1px 24% 48% 1px;border-radius:inherit;background:linear-gradient(112deg,rgba(255,255,255,.78),rgba(255,255,255,.16) 45%,transparent 78%);opacity:.75;pointer-events:none;mix-blend-mode:screen}
     .join:after,.cta:after,.more:after{content:"";position:absolute;z-index:-1;width:42%;height:150%;left:-15%;top:-35%;transform:rotate(28deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.36),transparent);filter:blur(4px);opacity:.62;pointer-events:none}
@@ -48,9 +52,20 @@
     .hero{isolation:isolate;background:radial-gradient(ellipse 72% 70% at 50% 58%,rgba(32,48,115,.42),transparent 70%),linear-gradient(160deg,#030713,#080c2a 52%,#050918)!important}
     .hero-flow{position:absolute;z-index:0;inset:0;width:100%;height:100%;pointer-events:none;opacity:.92;mix-blend-mode:screen}
     .hero-flow canvas{display:block;width:100%;height:100%}
-    .hero-flow:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 52%,transparent 35%,rgba(3,7,19,.24) 78%,rgba(3,7,19,.72) 100%);pointer-events:none}
+    .hero-flow:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 52%,transparent 30%,rgba(3,7,19,.18) 67%,rgba(3,7,19,.8) 100%);pointer-events:none}
+    /* Hero HUD: a restrained sci-fi frame that gives the particle field scale and depth. */
+    .hero:before{content:"";position:absolute;inset:18px;z-index:1;border:1px solid rgba(155,210,255,.14);border-radius:28px;pointer-events:none;box-shadow:inset 0 0 80px rgba(78,119,255,.08)}
+    .hero:after{content:"";position:absolute;z-index:0;inset:auto 0 0;height:42%;background:linear-gradient(transparent,rgba(2,8,22,.72)),repeating-linear-gradient(90deg,transparent 0 79px,rgba(120,181,255,.055) 80px),repeating-linear-gradient(0deg,transparent 0 59px,rgba(120,181,255,.045) 60px);mask-image:linear-gradient(to top,black,transparent);pointer-events:none}
+    .hero-kicker{display:inline-flex;align-items:center;gap:9px;margin-bottom:22px;padding:7px 13px;border:1px solid rgba(139,215,255,.3);border-radius:999px;background:rgba(8,26,57,.48);color:#bfeaff;font-size:11px;letter-spacing:.22em;text-transform:uppercase;box-shadow:0 0 25px rgba(88,167,255,.12);backdrop-filter:blur(12px)}
+    .hero-kicker i{width:7px;height:7px;border-radius:50%;background:#6affd4;box-shadow:0 0 12px #6affd4;animation:beacon 1.8s ease-in-out infinite}
+    .hero-rail{position:absolute;z-index:2;top:50%;display:flex;flex-direction:column;gap:9px;color:#a8c6e8;font-size:10px;letter-spacing:.14em;line-height:1.2;pointer-events:none;opacity:.75}
+    .hero-rail.left{left:46px;transform:translateY(-50%)}.hero-rail.right{right:46px;align-items:flex-end;transform:translateY(-50%)}
+    .hero-rail b{color:#e5f4ff;font-size:12px;font-weight:700;letter-spacing:.06em}.hero-rail span{display:block;color:#7799c4}
+    .hero-rail .bar{width:66px;height:2px;background:linear-gradient(90deg,#6cffd9,#7895ff);box-shadow:0 0 12px rgba(109,255,215,.5)}
+    @keyframes beacon{50%{opacity:.4;transform:scale(.72)} }
     .hero .particles{display:none!important}
     @media(max-width:800px){
+      .hero:before{inset:10px;border-radius:18px}.hero-rail{display:none}.hero-kicker{margin-bottom:16px;font-size:9px;letter-spacing:.16em}.hero-inner{padding-left:10px;padding-right:10px}
       body{font-size:14px}
       .hero h2{font-size:20px;margin-bottom:12px}
       .tags{font-size:12px;line-height:1.55;margin-bottom:16px}
@@ -94,7 +109,7 @@
 </head>
 <body>
 <nav class="nav"><a class="brand" href="#top">FANRUAN <b>AI / UED</b></a><div class="navlinks"><a href="#intro">赛事简介</a><a href="#schedule">赛事日程</a><a href="#tracks">赛道介绍</a><a href="#awards">奖金权益</a><a href="#submit">作品提交和评审</a><a href="#judges">大赛评委</a><a href="#join">扫码入群</a><a href="#about">关于帆软</a></div><a class="join" href="https://t6ixa9nyl6.jiandaoyun.com/f/6a866bdcbe91babcca39b631" target="_blank" rel="noopener">立即报名</a></nav>
-<header class="hero" id="top"><div class="particles"></div><div class="hero-inner"><h1>2026帆软<em class="ai-mark">AI</em>产品<br>体验设计挑战赛</h1><h2>让AI的价值，自然流淌</h2><p class="tags">面向全社会开放｜个人或组队参赛｜可多项目报名｜鼓励使用 AI 工具创作</p><a class="cta" href="https://t6ixa9nyl6.jiandaoyun.com/f/6a866bdcbe91babcca39b631" target="_blank" rel="noopener">立即报名 →</a><div class="datebar"><div><b>报名</b> 即日起~9月15日</div><div><b>作品提交</b> 10月20日前</div><div><b>决赛路演</b> 10月23日~27日</div></div></div></header>
+<header class="hero" id="top"><div class="particles"></div><div class="hero-rail left"><b>AI / UED 2026</b><span>EXPERIENCE LAB</span><span class="bar"></span><span>LIVE CHALLENGE</span></div><div class="hero-rail right"><b>OPEN CALL</b><span>DESIGN THE FLOW</span><span class="bar"></span><span>01 — 05</span></div><div class="hero-inner"><div class="hero-kicker"><i></i> FANRUAN AI EXPERIENCE CHALLENGE</div><h1>2026帆软<em class="ai-mark">AI</em>产品<br>体验设计挑战赛</h1><h2>让AI的价值，自然流淌</h2><p class="tags">面向全社会开放｜个人或组队参赛｜可多项目报名｜鼓励使用 AI 工具创作</p><a class="cta" href="https://t6ixa9nyl6.jiandaoyun.com/f/6a866bdcbe91babcca39b631" target="_blank" rel="noopener">立即报名 →</a><div class="datebar"><div><b>报名</b> 即日起~9月15日</div><div><b>作品提交</b> 10月20日前</div><div><b>决赛路演</b> 10月23日~27日</div></div></div></header>
 <main>
 <section id="intro"><h2 class="heading">赛事简介</h2><div class="intro"><p>AI产品的竞争，不只在模型能力和功能数量，也在于用户能否看懂、会用、敢用、持续使用，好的体验设计能让产品价值自然流淌。</p><p>我们邀请每一位对设计有热情的创作者，为帆软悟帆、Dora、MOSS、吸管等AI新产品，以真实产品和真实问题为起点，定义看得懂、会使用、敢信任、愿持续使用的体验，让 AI的价值被更自然地理解、体验与信任。</p><p><strong>你的设计，有机会被直接采纳进入真实产品!</strong></p></div><div class="info-pairs"><article><b>参赛对象</b>挑战赛面向全社会开放，个人选手、企业机构等各类组织均可参与。欢迎在校生/应届生/设计工作从业者/企业等参赛!</article><article><b>参赛方式</b>个人或组队均可；同一位选手或小组可报名多个项目（每个选题需单独提交报名信息）。</article></div></section>
 <section id="schedule" class="dark"><h2 class="heading">赛事日程</h2><div class="timeline"><article class="time"><b>启动报名</b>即日起~9月15日<small>提交报名并选择赛道方向</small></article><article class="time"><b>作品提交</b>10月20日前<small>完成设计作品及评审材料提交</small></article><article class="time"><b>作品初审</b>10月22日前<small>专业评审团初筛，入围作品进入最终路演</small></article><article class="time"><b>路演评审</b>10月23日~27日<small>路演评审，可线上进行</small></article><article class="time"><b>获奖公示</b>10月28日~30日<small>公布获奖名单和作品宣传</small></article></div></section>
