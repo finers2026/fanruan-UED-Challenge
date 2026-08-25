@@ -119,6 +119,10 @@
       #judges .judge img{width:76%;margin:0 auto;aspect-ratio:1/1}
       #judges .judge b,#judges .judge span{display:block;text-align:center}
     }
+    /* Final responsive CTA pass: keep mobile buttons identical to the airy blue-green glass treatment. */
+    .join,.cta,.more{background:linear-gradient(115deg,rgba(179,255,228,.48) 0%,rgba(80,246,190,.38) 30%,rgba(20,218,164,.34) 63%,rgba(10,154,155,.42) 100%)!important;color:#eafff8!important;border:1px solid rgba(191,255,235,.82)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.62),inset 0 -2px 0 rgba(5,91,91,.2),inset 0 0 20px rgba(107,255,219,.18),0 8px 22px rgba(0,45,64,.28),0 0 22px rgba(45,255,190,.34)!important;backdrop-filter:blur(18px) saturate(165%)}
+    .join:before,.cta:before,.more:before{background:transparent!important;opacity:0!important;display:none!important}
+    @media(max-width:800px){.join,.cta,.more{background:linear-gradient(115deg,rgba(179,255,228,.5) 0%,rgba(80,246,190,.4) 30%,rgba(20,218,164,.36) 63%,rgba(10,154,155,.44) 100%)!important;color:#eafff8!important;border-color:rgba(191,255,235,.86)!important}}
   </style>
 </head>
 <body>
