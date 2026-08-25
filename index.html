@@ -40,6 +40,24 @@
       .judge img{width:100%;height:auto!important;min-height:0!important;aspect-ratio:1/1;object-fit:cover;border-radius:7px}
       .judge b{font-size:13px;margin-top:7px;line-height:1.35}
       .judge span{font-size:10px;line-height:1.35;display:block;margin-top:2px}
+      /* Benefits: keep the full table visible and allow long cells to wrap. */
+      #awards .award.active{align-items:stretch;text-align:left;overflow:visible}
+      #awards .award table{width:100%;table-layout:fixed;white-space:normal;font-size:10px}
+      #awards .award th,#awards .award td{white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+      #awards .award th:nth-child(1),#awards .award td:nth-child(1){width:23%}
+      #awards .award th:nth-child(2),#awards .award td:nth-child(2){width:27%}
+      #awards .award th:nth-child(3),#awards .award td:nth-child(3){width:50%}
+      #awards .award p{text-align:left;width:100%;margin-left:0}
+      #submit .submission{text-align:left}
+      #submit .submission ol{padding-left:0;margin-left:0;list-style-position:inside}
+      #submit .submission li{padding-left:0;margin-left:0;text-align:left}
+      /* Jury: first row 3 cards, second row 2 centered cards; no horizontal scrolling. */
+      #judges .judge-row{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;overflow:visible}
+      #judges .judge{grid-column:span 2;padding:6px}
+      #judges .judge:nth-child(4){grid-column:2 / span 2}
+      #judges .judge:nth-child(5){grid-column:4 / span 2}
+      #judges .judge img{width:76%;margin:0 auto;aspect-ratio:1/1}
+      #judges .judge b,#judges .judge span{display:block;text-align:center}
     }
   </style>
 </head>
