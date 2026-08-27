@@ -124,6 +124,13 @@
     .join:before,.cta:before,.more:before{background:transparent!important;opacity:0!important;display:none!important}
     @media(max-width:800px){.join,.cta,.more{background:linear-gradient(115deg,rgba(179,255,228,.5) 0%,rgba(80,246,190,.4) 30%,rgba(20,218,164,.36) 63%,rgba(10,154,155,.44) 100%)!important;color:#eafff8!important;border-color:rgba(191,255,235,.86)!important}}
     .finebi-note{color:#8fc9ff!important;font-weight:700;background:rgba(73,159,255,.08);border-left:3px solid #72b8ff;padding:10px 14px;border-radius:8px}
+    /* Scroll-performance pass: offscreen sections are not painted; avoid expensive full-page backdrop sampling. */
+    section{content-visibility:auto;contain-intrinsic-size:auto 620px}
+    .hero-flow{contain:paint}
+    .nav{background:linear-gradient(180deg,rgba(3,9,23,.96),rgba(3,9,23,.78));backdrop-filter:none}
+    .join,.cta,.more{backdrop-filter:none!important}
+    .judge img{filter:none}
+    @media(max-width:800px){section{contain-intrinsic-size:auto 520px}.nav{backdrop-filter:none}}
   </style>
 </head>
 <body>
@@ -139,7 +146,7 @@
 <div class="panel" id="xiguan"><article class="track-card"><div class="track-top"><div class="track-name">吸管<span>企业级用户调研和售前售后咨询Agent平台</span></div><a class="site" target="_blank" rel="noopener" href="https://xiguan.cn/">产品官网 ↗</a></div><div class="spec"><article><b>定位</b>企业级用户调研和售前售后咨询Agent平台</article><article><b>核心功能</b>用户调研/访谈、售前咨询、智能售后、智能教练等</article></div><details class="topic" open><summary>命题 · 让吸管的对话更“有趣”</summary><p><b>问题和挑战</b>吸管作为一个调研、客服、表单信息收集类的AI产品，其中核心的体验在于表单填写页面、问卷填写页面、对话页面。为了确保受访者的调研/问卷填写完成率，我们也设计了一些简单的正反馈：比如游戏化互动设计（达成节点之后绽放烟花），给对话者一些正反馈和情绪价值</p><p><b>命题说明</b>我们希望可以在被访者页面设计一些更有趣的交互视觉体验，比如：触发了追问和反问，意图澄清的时候，是否可以加入一些动向或者说卡通形象在页面上？</p></details></article></div><p style="margin-top:27px"><a class="cta" href="https://t6ixa9nyl6.jiandaoyun.com/f/6a866bdcbe91babcca39b631" target="_blank" rel="noopener">立即报名 →</a></p></section>
 <section id="awards" class="dark"><div class="kicker">AWARDS & BENEFITS</div><h2 class="heading">奖金和权益</h2><div class="slider"><article class="award"><div class="num">01 / 奖项奖金</div><div class="trophy">🏆</div><h3>设计创新奖项</h3><table><tr><th>奖项</th><th>奖金与荣誉</th><th>获奖条件</th></tr><tr><td>设计创新金奖</td><td>¥8,000/组 + 奖杯</td><td>综合得分第1，评审均分不低于4分（满分5）</td></tr><tr><td>设计创新银奖</td><td>¥5,000/组 + 奖杯</td><td>综合得分第2、3，评审均分不低于3.5分</td></tr><tr><td>设计创新铜奖</td><td>¥3,000/组 + 奖杯</td><td>综合得分第4、5，评审均分不低于3分</td></tr><tr><td>优秀参与奖</td><td>¥1,000/组 + 奖杯</td><td>作品完成度高，在交互体验或视觉表现上优良。若干个名额。</td></tr></table></article><article class="award"><div class="num">02 / OFFER机会</div><h3>让优秀设计，通往下一程</h3><p>针对任意奖项的获奖选手</p><p>27届应届生可获得帆软校招UED岗位免笔试直达终面的权益</p><p>非应届在校生可直接获得UED实习岗位Offer权益</p><p>社招人员可获得UED社招岗位免笔试直达终面的权益</p></article><article class="award"><div class="num">03 / 合作与其他权益</div><h3>让作品走入真实场景</h3><p><b>合作权益：</b>获得任意奖项的人员后续拥有和帆软设计项目合作落地权益</p><p><b>其他权益：</b>获奖作品将在帆软内部展示宣传，并有机会直接被AI团队采纳或融入现有设计</p></article></div><p style="margin-top:28px"><a class="cta" href="https://t6ixa9nyl6.jiandaoyun.com/f/6a866bdcbe91babcca39b631" target="_blank" rel="noopener">立即报名 →</a></p></section>
 <section id="submit"><div class="kicker">SUBMISSION & REVIEW</div><h2 class="heading">作品提交和评审</h2><div class="tabs" data-tabs="submit"><button class="tab active" data-target="work">作品提交</button><button class="tab" data-target="review">评审标准</button></div><div class="switch-panels"><article class="submission active" id="work"><h3>作品提交</h3><p>请提交两项材料到报名表单（立即报名&提交作品 ）。可先报名，后续提交作品材料，材料包含2部分内容：</p><ol><li><b>作品呈现：</b>设计原型/前端代码/Demo/HTML/设计稿(Figma链接或源文件)等格式均可，鼓励使用AI工具创作。</li><li><b>设计文档：</b>简要说明发现的问题、做出的改变或创意、用户价值，以及已验证的效果(如有)，文档格式不限，建议800字以内。</li></ol><p><b>原创说明：</b>参赛作品须为原创，不得抄袭、侵权、冒用他人成果或提供伪造的用户研究、业务数据、测试结论等虚假信息。</p><p>作品知识产权归参赛作者所有;主办方有权将作品用于赛事宣传、官方内外网站浏览。</p></article><article class="submission" id="review"><h3>评审标准</h3><ol><li><b>设计创新性(50%)：</b>是否以新颖设计突破企业级AI产品体验边界</li><li><b>用户体验质量(30%)：</b>是否兼顾易用性、交互效率、流畅度、视觉审美</li><li><b>方案完整性(20%)：</b>是否覆盖问题需求、具体方案、效果验证或计划</li></ol><p>获奖基础条件为专业评审团通过票数不少于3/5。</p></article></div></section>
-<section id="judges" class="dark"><div class="kicker">JURY</div><h2 class="heading">大赛评委</h2><p>由帆软产品、研发与UED专家组成专业评审团，为优秀方案提供专业判断与产品视角。</p><div class="judge-row"><article class="judge"><img src="judge-ziv.jpg" alt="Ziv-张驰" loading="eager" fetchpriority="high" decoding="async"><b>Ziv · 张驰</b><span>帆软产品总监</span></article><article class="judge"><img src="judge-sean.webp" alt="Sean-邵文武" loading="eager" fetchpriority="high" decoding="async"><b>Sean · 邵文武</b><span>帆软研发总监</span></article><article class="judge"><img src="judge-phenex.webp" alt="Phenex-张孝慈" loading="eager" fetchpriority="high" decoding="async"><b>Phenex · 张孝慈</b><span>帆软UED设计总监</span></article><article class="judge"><img src="judge-greenwood.webp" alt="Greenwood-王一多" loading="eager" fetchpriority="high" decoding="async"><b>Greenwood · 王一多</b><span>帆软简道云产品负责人</span></article><article class="judge"><img src="judge-summon.webp" alt="Summon-夏添荣" loading="eager" fetchpriority="high" decoding="async"><b>Summon · 夏添荣</b><span>帆软悟帆产品负责人</span></article></div></section>
+<section id="judges" class="dark"><div class="kicker">JURY</div><h2 class="heading">大赛评委</h2><p>由帆软产品、研发与UED专家组成专业评审团，为优秀方案提供专业判断与产品视角。</p><div class="judge-row"><article class="judge"><img src="judge-ziv.jpg" alt="Ziv-张驰" loading="eager" fetchpriority="high" decoding="async"><b>Ziv · 张驰</b><span>帆软产品总监</span></article><article class="judge"><img src="judge-sean.webp" alt="Sean-邵文武" loading="eager" fetchpriority="high" decoding="async"><b>Sean · 邵文武</b><span>帆软研发总监</span></article><article class="judge"><img src="judge-summon.webp" alt="Summon-夏添荣" loading="eager" fetchpriority="high" decoding="async"><b>Summon · 夏添荣</b><span>帆软悟帆产品负责人</span></article><article class="judge"><img src="judge-greenwood.webp" alt="Greenwood-王一多" loading="eager" fetchpriority="high" decoding="async"><b>Greenwood · 王一多</b><span>帆软简道云产品负责人</span></article><article class="judge"><img src="judge-phenex.webp" alt="Phenex-张孝慈" loading="eager" fetchpriority="high" decoding="async"><b>Phenex · 张孝慈</b><span>帆软UED设计总监</span></article></div></section>
 <section id="join" class="dark qr"><div class="kicker">JOIN THE COMMUNITY</div><h2 class="heading">扫码入群</h2><div class="qrbox"><img src="event-assistant-qr.jpg" alt="赛事助手企业微信二维码"></div><p>添加赛事助手微信，加入官方交流社群，及时获取赛题答疑、赛事通知与作品提交提醒</p><a class="cta" href="https://t6ixa9nyl6.jiandaoyun.com/f/6a866bdcbe91babcca39b631" target="_blank" rel="noopener">立即报名 →</a></section>
 <section id="about"><div class="kicker">ABOUT FANRUAN</div><h2 class="heading">关于帆软</h2><div class="about-copy"><p>帆软软件有限公司成立于2006年，是中国专业的大数据BI和分析平台提供商，专注商业智能和数据分析领域，致力于为全球企业提供一站式商业智能解决方案。</p><p>帆软在专业水准、组织规模、服务范围、企业客户数量上均为业内前列，先后获得包括Gartner、IDC、CCID在内的众多专业咨询机构的认可。2025年销售额17.4亿元，2018年-2025年，连续多年入选中国大数据企业50强，连续多年中国商业智能和分析软件市场占有率第一。</p></div><div class="stats"><article class="stat"><b>2000<sup>+</sup></b><p>公司员工2000多人，“素质高、学历高、能力强”是帆软员工的普遍特征</p></article><article class="stat"><b>17.4<small> 亿</small></b><p>2025年帆软销售额17.4亿元，连续保持高增长率</p></article><article class="stat"><b>100<sup>%</sup></b><p>海外外共有20个分支机构；服务网点全国省份覆盖率100%，快速响应客户需求</p></article><article class="stat"><b>43000<sup>+</sup></b><p>帆软累计合作客户总量超过43000家，众多500强企业都选择信任帆软产品与服务</p></article><article class="stat"><b>355<small> 万</small></b><p>帆软社区的注册用户数超355万人</p></article><article class="stat"><b>高覆盖率</b><p>帆软客户覆盖国家统计标准（GBT 4754-2017）涉及的几乎全部细分行业</p></article></div><a class="more" href="https://www.fanruan.com/" target="_blank" rel="noopener">了解更多 ↗</a></section>
 </main><footer>2026帆软AI产品体验设计挑战赛</footer>
@@ -176,7 +183,56 @@ awardCards.forEach(card=>['transform','opacity','z-index'].forEach(property=>car
 document.querySelectorAll('[data-tabs]').forEach(group=>group.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{group.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));button.classList.add('active');const scope=group.parentElement;scope.querySelectorAll('.panel,.submission').forEach(x=>x.classList.remove('active'));document.getElementById(button.dataset.target).classList.add('active')})));
 const navs=[...document.querySelectorAll('.navlinks a')], sections=navs.map(a=>document.querySelector(a.getAttribute('href')));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){navs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});sections.forEach(s=>observer.observe(s));
 // 高清粒子河流：仅绘制粒子点，不绘制硬边线；随时间沿紫蓝色波面流动。
-(()=>{const hero=document.querySelector('.hero');if(!hero)return;const wrap=document.createElement('div');wrap.className='hero-flow';const canvas=document.createElement('canvas');wrap.append(canvas);hero.prepend(wrap);const ctx=canvas.getContext('2d',{alpha:true});let w=0,h=0,dpr=1,particles=[];const reduce=matchMedia('(prefers-reduced-motion: reduce)');function resize(){const r=hero.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);w=Math.max(1,r.width);h=Math.max(1,r.height);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);const count=Math.min(1800,Math.max(900,Math.round(w*h/760)));particles=Array.from({length:count},(_,i)=>({u:Math.random(),lane:Math.random(),phase:Math.random()*Math.PI*2,size:.42+Math.random()*1.28,alpha:.42+Math.random()*.58,speed:.00022+Math.random()*.00058,twinkle:Math.random()*Math.PI*2,seed:i}));}function draw(t){ctx.clearRect(0,0,w,h);const cy=h*.68;for(const p of particles){p.u=(p.u+p.speed*(reduce.matches?0.16:1))%1;const x=p.u*w;const envelope=Math.sin(Math.PI*p.u)**.42;const wave=Math.sin(p.u*11+p.phase+t*.00048)+.6*Math.sin(p.u*24-p.phase*.7+t*.00026);const y=cy+(p.lane-.5)*h*.38*envelope+wave*h*.085*envelope;const depth=.35+.65*envelope;const tw=.72+.28*Math.sin(t*.0025+p.twinkle);const hue=246+Math.sin(p.phase)*22+p.lane*48;const light=64+depth*24;const a=Math.min(.98,p.alpha*depth*tw);if(x< -5||x>w+5)continue;ctx.beginPath();ctx.fillStyle='hsla('+hue+',100%,'+light+'%,'+a+')';ctx.shadowBlur=4+depth*9;ctx.shadowColor='hsla('+hue+',100%,72%,'+(a*.9)+')';ctx.arc(x,y,p.size*(.65+depth*.9),0,Math.PI*2);ctx.fill();}ctx.shadowBlur=0;if(!reduce.matches)requestAnimationFrame(draw);}resize();addEventListener('resize',resize,{passive:true});requestAnimationFrame(draw);})();
+(()=>{
+  const hero=document.querySelector('.hero');
+  if(!hero)return;
+  const wrap=document.createElement('div');
+  wrap.className='hero-flow';
+  const canvas=document.createElement('canvas');
+  wrap.append(canvas);hero.prepend(wrap);
+  const ctx=canvas.getContext('2d',{alpha:true});
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+  let w=0,h=0,dpr=1,particles=[],running=false,frame=0,last=0;
+  function resize(){
+    const r=hero.getBoundingClientRect();
+    dpr=Math.min(devicePixelRatio||1,1.25);
+    w=Math.max(1,r.width);h=Math.max(1,r.height);
+    canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    const count=Math.min(760,Math.max(420,Math.round(w*h/2100)));
+    particles=Array.from({length:count},()=>({
+      u:Math.random(),lane:Math.random(),phase:Math.random()*Math.PI*2,
+      size:.42+Math.random()*1.28,alpha:.42+Math.random()*.58,
+      speed:.00022+Math.random()*.00058,twinkle:Math.random()*Math.PI*2
+    }));
+  }
+  function draw(t){
+    if(!running)return;
+    frame=requestAnimationFrame(draw);
+    if(t-last<33)return;
+    last=t;ctx.clearRect(0,0,w,h);
+    const cy=h*.68;
+    for(const p of particles){
+      p.u=(p.u+p.speed*(reduce.matches ? .16 : 1))%1;
+      const x=p.u*w,envelope=Math.sin(Math.PI*p.u)**.42;
+      const wave=Math.sin(p.u*11+p.phase+t*.00048)+.6*Math.sin(p.u*24-p.phase*.7+t*.00026);
+      const depth=.35+.65*envelope;
+      const y=cy+(p.lane-.5)*h*.38*envelope+wave*h*.085*envelope;
+      const a=Math.min(.98,p.alpha*depth*(.72+.28*Math.sin(t*.0025+p.twinkle)));
+      ctx.beginPath();
+      ctx.fillStyle=`hsla(${246+Math.sin(p.phase)*22+p.lane*48},100%,${64+depth*24}%,${a})`;
+      ctx.arc(x,y,p.size*(.65+depth*.9),0,Math.PI*2);ctx.fill();
+    }
+  }
+  const visibility=new IntersectionObserver(([entry])=>{
+    running=entry.isIntersecting&&!reduce.matches;
+    if(running){last=0;cancelAnimationFrame(frame);frame=requestAnimationFrame(draw)}
+    else cancelAnimationFrame(frame);
+  },{threshold:.01});
+  resize();visibility.observe(hero);
+  addEventListener('resize',resize,{passive:true});
+  if(reduce.matches)draw(0);
+})();
  // Add FineBI Next as the fifth track after Xiguan, matching existing tab/panel structure.
  (()=>{const tabs=document.querySelector('.tabs[data-tabs="tracks"]'),xiguan=document.getElementById('xiguan');if(!tabs||!xiguan||document.getElementById('finebi-next'))return;const tab=document.createElement('button');tab.className='tab';tab.dataset.target='finebi-next';tab.textContent='FineBI Next赛道';tabs.append(tab);const panel=document.createElement('div');panel.className='panel';panel.id='finebi-next';panel.innerHTML='<article class="track-card"><div class="track-top"><div class="track-name">FineBI Next<span>新一代AI原生大数据分析平台</span></div><a class="site" target="_blank" rel="noopener" href="https://www.fanruan.com/finebinext">产品官网 ↗</a></div><div class="spec"><article><b>定位</b>新一代AI原生大数据分析平台</article><article><b>核心功能</b>对话式AI数据分析、智能预警、分析和场景两大类Agent、业务经验Skill沉淀、企业经营记忆、数据溯源治理等能力</article></div><details class="topic" open><summary>开放命题：FineBI Next使用体验优化</summary><p><b>命题说明</b>登录FineBI Next，使用九思AI智能分析工具，完成一个数据分析。在整个使用过程中，挖掘使用的体验问题，并给出设计解决方案。</p><p class="finebi-note">注意：本产品AI功能需要申请开通，请添加下方赛事助手企业微信，进入官方群聊申请开通。</p></details></article></div>';xiguan.after(panel);const specs=panel.querySelectorAll('.spec article');const feature=document.createElement('p');feature.className='feature';feature.textContent='具备'+specs[1].textContent.replace('核心功能','').trim()+'。';panel.querySelector('.track-top').after(feature);panel.querySelector('.spec').remove();tab.addEventListener('click',()=>{tabs.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));tab.classList.add('active');tabs.parentElement.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));panel.classList.add('active')});})();
  </script></body></html>
